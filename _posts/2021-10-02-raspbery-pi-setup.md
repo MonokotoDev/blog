@@ -6,3 +6,8 @@ $ sudo apt autoremove -y
 $ sudo apt clean
 $ sudo reboot
 ```
+
+# Japanese input environment
+```
+$ sudo apt-get install ibus-mozc
+```
