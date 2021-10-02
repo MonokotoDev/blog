@@ -24,3 +24,15 @@ v14.18.0
 $ node-red --help
 Node-RED v2.0.6
 ```
+# Setting Node-RED
+プロジェクト機能をONにする。
+`node-red-start`
+プロジェクトを登録
+gitの情報とか入れる。
+プロジェクト設定→フローに設定 `system-ui-flow.json`
+依存関係の設定→プロジェクトへ追加 `node-red-node-smooth`
+
+testは閉じる必要あり。
+これもnodeいれる。
+BLE Beacon Scanner
+Ambient
