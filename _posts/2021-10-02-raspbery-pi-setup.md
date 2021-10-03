@@ -26,9 +26,6 @@ Node-RED v2.0.6
 ```
 `node-red-start`してNode-REDが起動することを確認、その後に`node-red-stop`しておく。
 
-
-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
-
 # Deploy Node-RED application (A)
 ```
 $ cd /home/pi/.node-red
