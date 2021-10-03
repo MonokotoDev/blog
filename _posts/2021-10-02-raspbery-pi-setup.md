@@ -24,15 +24,41 @@ v14.18.0
 $ node-red --help
 Node-RED v2.0.6
 ```
-# Setting Node-RED
-プロジェクト機能をONにする。
-`node-red-start`
-プロジェクトを登録
-gitの情報とか入れる。
-プロジェクト設定→フローに設定 `system-ui-flow.json`
-依存関係の設定→プロジェクトへ追加 `node-red-node-smooth`
+`node-red-start`してNode-REDが起動することを確認、その後に`node-red-stop`しておく。
 
-testは閉じる必要あり。
-これもnodeいれる。
-BLE Beacon Scanner
-Ambient
+
+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
+
+# Deploy Node-RED application (A)
+```
+$ cd /home/pi/.node-red
+$ mkdir projects
+```
+ProductionStateCardリポジトリを指定してプロジェクトをロードする。
+
+```
+$ cd /home/pi/.node-red
+$ cp projects/ProductionStateCard/deploy/package.json .
+$ npm install
+```
+
+# Deploy Node-RED application (B)
+```
+$ mkdir /home/pi/.node-red/projects
+$ cd /home/pi/.node-red/projects
+$ git clone https://github.com/MonokotoDev/ProductionStateCard.git
+$ cd ProductionStateCard/deploy
+$ cp package.json settings.js .config.projects.json .config.users.json /home/pi/.node-red
+$ cd /home/pi/.node-red
+$ npm install
+```
+
+# Mount NFS
+```
+sudo mount -t nfs 52.71.121.91:/home/aigaiot/node-red-db /mnt
+```
+
+# Start Node-RED
+```
+$ node-red-start
+```
