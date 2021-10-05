@@ -52,7 +52,7 @@ $ npm install
 
 # Mount NFS
 ```
-sudo mount -t nfs 52.71.121.91:/home/aigaiot/node-red-db /mnt
+sudo mount -t nfs :/home/aigaiot/node-red-db /mnt
 ```
 
 # Start Node-RED
